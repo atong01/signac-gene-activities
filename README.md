@@ -1,5 +1,5 @@
 # signac-gene-activities
-Running Signac gene activity scoring through docker. This is built from the signac vignette. It installs one additional package which is necessary for the vignette to work.
+Running Signac gene activity scoring through docker. This is built from the signac vignette. It installs one additional package which is necessary for the vignette to work. I had many difficulties installing the dependencies for building gene activity scores, using this command only requires docker (and sufficient memory).
 
 To run this code use the following command:
 ```
