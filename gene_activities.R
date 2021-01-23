@@ -1,7 +1,3 @@
-
-
-# sudo docker run -it -v $PWD:/data/ signac
-
 library(Signac)
 library(Seurat)
 library(GenomeInfoDb)
