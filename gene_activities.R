@@ -42,10 +42,6 @@ pbmc <- RunTFIDF(pbmc)
 pbmc <- FindTopFeatures(pbmc, min.cutoff = 'q0')
 pbmc <- RunSVD(pbmc)
 
-pbmc <- RunUMAP(object = pbmc, reduction = 'lsi', dims = 2:30)
-pbmc <- FindNeighbors(object = pbmc, reduction = 'lsi', dims = 2:30)
-pbmc <- FindClusters(object = pbmc, verbose = FALSE, algorithm = 3)
-
 gene.activities <- GeneActivity(pbmc)
 
 dir.create("/data/gene_activities_matrix")
