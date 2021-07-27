@@ -4,10 +4,12 @@ Running Signac gene activity scoring through docker. This is built from the sign
 
 To run this code use the following command:
 ```
-docker run -it -v [PATH TO DATA]:/data/ atong01/signac-gene-activities:latest Rscript gene_activities.R
+docker run -it -v [PATH TO DATA]:/data/ -e RETICULATE_MINICONDA_ENABLED=FALSE atong01/signac-gene-activities:latest Rscript gene_activities.R
 ```
 
 `[PATH TO DATA]` should be a writable path to a folder containing: `fragments.tsv.gz`, `filtered_peak_bc_matrix.h5`, and `singlecell.csv`.
+
+setting the environment variable `RETICULATE_MINICONDA_ENABLED=FALSE` disables the prompt for install when loading `Signac` this auto accepts in a script which messes up package versioning. In particular Seurat. https://github.com/rstudio/reticulate/issues/608
 
 You may need to reconfigure the script depending on your specific use case. We provide another script `10X_gene_activities.R` that worked for a 10X multiome datasets.
 
