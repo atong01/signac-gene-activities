@@ -1,12 +1,13 @@
 library(Signac)
 library(Seurat)
+library(Matrix)
 library(EnsDb.Hsapiens.v86)
 library(BSgenome.Hsapiens.UCSC.hg38)
 
 set.seed(1234)
 
 # load the RNA and ATAC data
-counts <- Read10X_h5(filename = "/data/filtered_peak_bc_matrix.h5")
+counts <- Read10X_h5(filename = "/data/raw_feature_bc_matrix.h5")
 fragpath <- '/data/fragments.tsv.gz'
 
 # get gene annotations for hg38
