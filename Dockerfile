@@ -5,6 +5,3 @@ RUN R --slave --no-restore --no-save -e "BiocManager::install(c('BSgenome.Hsapie
 RUN R --slave --no-restore --no-save -e "install.packages('remotes')"
 
 RUN R --slave --no-restore --no-save -e "remotes::install_github('mojaveazure/seurat-disk')"
-
-COPY gene_activities.R /gene_activities.R
-COPY 10X_gene_activities.R /10X_gene_activities.R
